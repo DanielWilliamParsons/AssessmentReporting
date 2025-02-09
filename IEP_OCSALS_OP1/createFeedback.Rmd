@@ -1,0 +1,35 @@
+---
+title: "OCSALS 2023: Oral Presentation 1 Feedback"
+date: '2023-07-21'
+output: 
+  word_document: 
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  personal.details.flex: ""
+  intro.advice.flex: ""
+  detailed.advice.flex: ""
+  impressive.points.flex: ""
+---
+
+```{r setup, include=FALSE, ft.split = TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+library(officer)
+
+```
+`r personal.details.flex`
+<br>
+
+`r intro.advice.flex`
+<br>
+
+`r detailed.advice.flex`
+<br>
+
+`r impressive.points.flex`
+
+
+
+
+
+
+
