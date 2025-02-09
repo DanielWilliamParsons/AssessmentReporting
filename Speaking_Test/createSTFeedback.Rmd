@@ -1,0 +1,57 @@
+---
+title: "OCSALS 2023: Speaking Test 2"
+date: '2023-08-17'
+output: 
+  word_document: 
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  this.score.flex: ""
+  studentDetails.flex: ""
+  totalScore.flex: ""
+  both.scores: ""
+---
+
+```{r setup, include=FALSE, ft.split = TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(dpi = 300)
+library(officer)
+library(knitr)
+
+```
+`r studentDetails.flex`
+## Component Scores
+`r this.score.flex`
+Comprehensibility refers to how clear your pronunciation is. Fluency refers to how smoothly you speak. Grammar refers to your ability to use a range of simple and complex sentences. Vocabulary refers to the range and appropriateness of words you use. Content refers to how you support your opinion. CommSkills means communication skills and refers to how you negotiate meaning by passing the turn, being polite and building on each others' ideas. See the rubric for specific details about each component.
+<br>
+
+## Score Comparison
+<br>
+
+```{r figure1, echo = FALSE, figure.align = "center", fig.width=6, fig.height = 4, out.width="4.5in", fig.cap="Your score compared with the average score in the IEP for Speaking Test 2"}
+
+par(mar = c(0,0,0,0))
+radarchart(
+    both.scores,
+    axistype = 1,
+    pcol = c(NA, 2), pfcol = scales::alpha(c("#99999980", NA), 0.5), plwd = 3, plty = 1,
+    cglcol = "grey", cglty = 1, cglwd = 0.8,
+    axislabcol = "navy",
+    vlcex = 1.3, vlabels = colnames(both.scores),
+    centerzero = FALSE,
+    caxislabels = c("1", "2", "3", "4", "5")
+  )
+
+your.score = both.scores[c(3,4),]
+kable(your.score, digits = 2)
+
+```
+<br>
+`r totalScore.flex`
+The total score is out of 100. Refer to the rubric to understand how the total score is calculated from the component scores.
+
+
+
+
+
+
+
