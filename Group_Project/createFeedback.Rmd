@@ -1,0 +1,55 @@
+---
+title: "OCSALS 2023: Final Presentation Score Report"
+date: '2023-09-01'
+output: 
+  word_document: 
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  personal.details.flex: ""
+  both.scores: ""
+  total.score: ""
+  penalty.comment: ""
+---
+
+```{r setup, include=FALSE, ft.split = TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(dpi = 300)
+library(officer)
+library(knitr)
+
+```
+`r personal.details.flex`
+## Information about your score
+The score for the final project uses a similar rubric as for oral presentations. However, comprehensibility, fluency and pacing are combined into a single criteria called Delivery. An additional criteria is Group Performance (GroupPerf), which judges how well you work together during your presentation, the tone (e.g., enjoyable but not silly; appropriate dress), time management, and collaboration during Q&A. The first three components (Delivery, Engagement and Language) are scored on an individual basis for your performance during the presentation. The final three components (Content, Visuals and Group Performance) are scored at a group level since you all worked to build your presentation. Weighting is: Delivery (15%), Engagement (15%), Language (20%), Content (20%), Visuals (20%), Group Performance (10%). Instructors will make brief comments on your group project in your Phase 2 report.
+
+## Scoring Details
+
+```{r figure1, echo = FALSE, figure.align = "center", fig.width=6, fig.height = 4, out.width="4.5in", fig.cap="Your score compared with the average score in the IEP for the Group Project Final Presentation"}
+
+par(mar = c(0,0,0,0))
+radarchart(
+    both.scores,
+    axistype = 1,
+    pcol = c(NA, 2), pfcol = scales::alpha(c("#99999980", NA), 0.5), plwd = 2, plty = 1,
+    cglcol = "grey", cglty = 1, cglwd = 0.8,
+    axislabcol = "navy",
+    vlcex = 1.3, vlabels = colnames(both.scores),
+    caxislabels = c("1", "2", "3", "4", "5")
+  )
+
+your.score = both.scores[c(3,4),]
+kable(your.score, digits = 1)
+
+kable(total.score, digits = 2)
+
+```
+<br>
+`r penalty.comment`
+
+
+
+
+
+
+
+
