@@ -1,0 +1,38 @@
+---
+title: "IMF Orientation Program 2023"
+output: 
+  word_document: 
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/draft_styles.docx"
+params:
+  scores.report.flex: ""
+  student.details.flex: ""
+  participation: ""
+---
+# Oral Communication Skills and Academic Listening Skills
+## Assessment Report
+
+```{r setup, include=FALSE, ft.split = TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(dpi = 300)
+library(officer)
+library(knitr)
+
+```
+<br>
+`r student.details.flex`
+
+### Scores
+`r scores.report.flex`
+
+### Participation and Attendance
+Your participation score is: `r participation` out of 100. You had absences and tardies.
+
+#### Final Score Calculation
+The final score is calculated as follows. Oral Presentation 2 is weighted 60%. The two listening quizzes are weighted 20%. Speaking Test 1 is weighted 20%. The score for participation is based on preparedness, active participation and taking the initiative during the OCSALS lessons.
+
+### Instructor's Comments
+
+
+### Instructor's Signature:
+### Date:
+
