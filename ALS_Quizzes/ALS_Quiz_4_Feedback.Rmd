@@ -1,0 +1,29 @@
+---
+title: "IEP OCSALS: Listening Quiz 4"
+date: '2023-08-25'
+output: 
+  word_document:
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  total.score.table.flex: ""
+  feedback.score.flex: ""
+  student.info.flex: ""
+  constructs.flex: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(officer)
+library(knitr)
+```
+`r student.info.flex`
+********
+`r total.score.table.flex`
+********
+The table below shows the scores gained in listening quiz 4 for each type of listening skill.
+As you can see, this quiz focused a lot more on detail, but this time the lecturer did not always repeat the details. The lecture contained a number of different side-topics, such as U.S. demographic data and points about other culture, such as Israel. In addition to this, the lecture was only played once. Both of these made the lecture more complex than usual, and this is probably the reason why gist and organization questions were more difficult than usual.
+`r feedback.score.flex`
+
+\newpage
+The following table explains each of the language skills that are tested in OCSALS.
+`r constructs.flex`

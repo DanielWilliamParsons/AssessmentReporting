@@ -1,0 +1,29 @@
+---
+title: "IEP OCSALS: Listening Quiz 2"
+date: '2023-08-02'
+output: 
+  word_document:
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  total.score.table.flex: ""
+  feedback.score.flex: ""
+  student.info.flex: ""
+  constructs.flex: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(officer)
+library(knitr)
+```
+`r student.info.flex`
+********
+`r total.score.table.flex`
+********
+The table below shows the scores gained in listening quiz 2 for each type of listening skill.
+Look carefully at the comments and decide what you need to work on. You can find out more information about the individual components at the back of this sheet.
+`r feedback.score.flex`
+
+\newpage
+The following table explains each of the language skills that are tested in OCSALS.
+`r constructs.flex`

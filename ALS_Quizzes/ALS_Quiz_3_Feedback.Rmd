@@ -1,0 +1,29 @@
+---
+title: "IEP OCSALS: Listening Quiz 3"
+date: '2023-08-14'
+output: 
+  word_document:
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  total.score.table.flex: ""
+  feedback.score.flex: ""
+  student.info.flex: ""
+  constructs.flex: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(officer)
+library(knitr)
+```
+`r student.info.flex`
+********
+`r total.score.table.flex`
+********
+The table below shows the scores gained in listening quiz 3 for each type of listening skill.
+As you can see, this quiz focused a lot more on connecting content. Connecting content tested your ability to connect the detailed information in the lecture to the correct summary of the key point. This made this test a little harder than previous tests and required strong note taking.
+`r feedback.score.flex`
+
+\newpage
+The following table explains each of the language skills that are tested in OCSALS.
+`r constructs.flex`

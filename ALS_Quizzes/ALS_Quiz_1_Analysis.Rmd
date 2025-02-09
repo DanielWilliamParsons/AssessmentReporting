@@ -1,0 +1,53 @@
+---
+title: "Listening Quiz 1 Analysis"
+date: '2022-07-25'
+output: 
+  word_document:
+    reference_docx: "/Users/danielparsons/dparsonsiuj@gmail.com - Google Drive/My Drive/01_Research/Testing/assets/OCSALS_style.docx"
+params:
+  iep.average: ""
+  section.average: ""
+  iep.construct.percent: ""
+  section.construct.percent: ""
+  difficulty.analysis: ""
+  discrimination.index: ""
+  section.incorrect.percentage: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(officer)
+library(knitr)
+```
+# Average Scores
+The following shows the average score for the IEP and the average score per section
+
+`r kable(iep.average)`
+`r kable(section.average)`
+
+# Constructs
+The following two tables show how students performed with the individual constructs. The first table looks at the constructs for the whole of the IEP. The percentage is the percentage of the total possible score achieved by all the students on questions with those constructs. The second table breaks this down into individual sections. By comparing the two tables, you can judge if your class has any trouble with a particular construct.
+
+`r kable(iep.construct.percent)`
+`r kable(section.construct.percent)`
+
+# Question analysis
+### Difficulty
+Difficulty is calculated as the percentage of incorrect answers. The question is very difficult if more than 80% of students got it incorrect. The question is a little difficult if between 60% and 80% of students got it incorrect. The question is reasonable is between 30% and 60% of students got it incorrect, and the question is easy if less than 30% of students got it incorrect.
+
+`r kable(difficulty.analysis)`
+
+The information in this table is useful for deciding if students scored poorly because of lots of difficult questions, or because they are weak students.
+
+### Discrimination
+Discrimination compares the top scoring 33% of students with the bottom scoring 33% of students. The formula per question is just the percentage of TOP students who got the question correct MINUS the percentage of BOTTOM students who got the question correct. The larger the difference, the greater the question disciminates between the top and bottom scoring students.
+
+`r kable(discrimination.index)`
+
+# Question per section
+This table ranks the questions according to the ratio of incorrect answers on a section-by-section basis. The higher the ratio, the greater the number of students in your section who got this question incorrect.
+`r kable(section.incorrect.percentage)`
+
+
+
+
